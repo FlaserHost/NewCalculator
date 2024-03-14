@@ -200,3 +200,23 @@
         font-size: 15px;
     }
 }
+
+@media screen and (max-width: 426px) {
+    .table-wrapper .tariff-title {
+        bottom: calc(100% + 124px);
+    }
+
+    .table-wrapper .second-tariff {
+        bottom: calc(100% + 93px);
+    }
+}
+
+@media screen and (max-width: 376px) {
+    .table-wrapper .tariff-title {
+        bottom: calc(100% + 130px);
+    }
+
+    .table-wrapper .tariff-title > .tariff-price {
+        font-size: 15px;
+    }
+}
