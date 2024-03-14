@@ -1,0 +1,504 @@
+@font-face {
+    font-family: 'Inter';
+    src: url('Inter/Inter-Regular.otf');
+}
+
+@font-face {
+    font-family: 'Inter Thin';
+    src: url('Inter/Inter-Thin.otf');
+}
+
+@font-face {
+    font-family: 'Onest';
+    src: url('Onest/Onest-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Onest Thin';
+    src: url('Onest/Onest-Thin.ttf');
+}
+
+:root {
+    --main-color: #0223B5;
+    --height: 43px;
+    --light-blue: rgba(2, 35, 181, .1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    font-family: Onest, sans-serif;
+    font-size: 16px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+input[type='number'] {
+    -moz-appearance: textfield;
+}
+
+h2 {
+    text-transform: uppercase;
+}
+
+.calculator {
+    width: 100%;
+    border-radius: 30px;
+    background-color: #E6E9F8;
+    padding: 100px 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.calculator__title,
+.calculator__title > span {
+    font-size: 30px;
+}
+
+.calc-form-wrapper {
+    width: 100%;
+    max-width: 844px;
+}
+
+.calc-form {
+    width: 100%;
+}
+
+.calculator__title,
+.calc-form-wrapper > span {
+    text-align: center;
+}
+
+.calculator__title > span {
+    color: var(--main-color);
+}
+
+.calc-form-wrapper {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.calc-form-wrapper > span {
+    display: block;
+    font-size: 20px;
+}
+
+.form-inputs-wrapper {
+    margin-top: 30px;
+    display: grid;
+    grid: 1fr / repeat(2, minmax(10px, 413px));
+    gap: 18px;
+}
+
+.form-btns-wrapper {
+    margin-top: 35px;
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+}
+
+.form-btns-wrapper > * {
+    width: 220px;
+    padding: 15px;
+    border: 1px solid var(--main-color);
+    border-radius: 7px;
+    display: block;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.form-btns-wrapper > .calc-request {
+    color: var(--main-color);
+    text-decoration: none;
+}
+
+.form-btns-wrapper > .calc-btn {
+    background-color: var(--main-color);
+}
+
+.form-inputs-wrapper input::placeholder {
+    color: #aaa;
+}
+
+.form-inputs-wrapper input {
+    border-radius: 10px;
+    padding: 15px 47px 15px 15px;
+    width: 100%;
+    max-width: 413px;
+}
+
+.calc-input-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.calc-input-wrapper:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    background: url('info.svg') no-repeat center / 20px;
+}
+
+.tariffs-and-costs {
+    margin-top: 140px;
+    width: 100%;
+    max-width: 1300px;
+    position: relative;
+    display: grid;
+    grid: 40px 1fr 100px / repeat(4, 1fr);
+}
+
+.tariffs-and-costs-title {
+    color: var(--main-color);
+    font-size: 35px;
+    grid-area: 1 / 1 / 2 / 3;
+}
+
+.tariffs-and-costs-title > span {
+    color: #000;
+    font-size: 35px;
+}
+
+.table-wrapper {
+    background-color: #fff;
+    display: grid;
+    grid: minmax(34px, 1fr) / minmax(200px, 1fr) repeat(3, 200px);
+    padding-top: 40px;
+    border-radius: 30px;
+    margin-top: 80px;
+}
+
+.table-wrapper > h2 {
+    grid-column: 1 / 5;
+    padding: 0 30px;
+}
+
+.table-wrapper > h2:not(:first-child) {
+    padding-top: 60px;
+    padding-bottom: 15px;
+}
+
+.table-wrapper > div {
+    height: 100%;
+    padding: 30px;
+}
+
+.table-wrapper > .check {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    white-space: nowrap;
+}
+
+.table-wrapper .tariff-title {
+    position: absolute;
+    bottom: calc(100% + 49px);
+    width: 100%;
+    height: 165px;
+    background-color: #fff;
+    padding: 20px;
+}
+
+.table-wrapper .tariff-title,
+.table-sticky-header > .tariff-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    gap: 6px;
+}
+
+.table-sticky-header > .tariff-title {
+    padding: 19px 30px 0 30px;
+}
+
+.table-wrapper .tariff-title > .popular-tariff,
+.table-sticky-header > .tariff-title > .popular-tariff {
+    position: absolute;
+    width: 100%;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.table-wrapper .tariff-title > .popular-tariff:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 40px;
+    position: absolute;
+    background-color: #fff;
+}
+
+.table-wrapper .tariff-title > .popular-tariff {
+    box-shadow: 0 0 10px 1px #ddd;
+    top: -15px;
+}
+
+.table-wrapper .tariff-title > .popular-tariff,
+.table-sticky-header > .tariff-title > .popular-tariff {
+    border-radius: 6px;
+}
+
+.table-sticky-header > .tariff-title > .popular-tariff {
+    box-shadow: 0 0 5px -1px #555;
+    height: calc(100% + 17px);
+    background-color: #677BD3;
+    z-index: -1;
+}
+
+.table-sticky-header .tariff-title > h3,
+.table-wrapper .tariff-title > h3 {
+    font-size: 24px;
+}
+
+.table-wrapper .tariff-title > h3 {
+    color: var(--main-color);
+}
+
+.table-sticky-header .tariff-title > h3,
+.table-sticky-header .tariff-title > .tariff-price,
+.table-sticky-header .tariff-title > .tariff-period {
+    color: #E4E7F6;
+}
+
+.table-wrapper .tariff-title > .tariff-price,
+.table-sticky-header .tariff-title > .tariff-price {
+    font-size: 20px;
+}
+
+.table-wrapper .tariff-title > .tariff-period,
+.table-sticky-header .tariff-title > .tariff-period {
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.table-wrapper .tariff-title > .tariff-period {
+    color: #999;
+}
+
+.table-wrapper .tariff-title > .tariff-period > .info-mark,
+.table-sticky-header .tariff-title > .tariff-period > .info-mark {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.table-wrapper .tariff-title > .tariff-period > .info-mark {
+    background: url('info.svg') no-repeat center / 20px;
+}
+
+.table-sticky-header .tariff-title > .tariff-period > .info-mark {
+    background: url('info-bright.svg') no-repeat center / 20px;
+}
+
+.table-wrapper .first-tariff {
+    border-radius: 12px 0 0 0;
+}
+
+.table-wrapper .third-tariff {
+    border-radius: 0 12px 0 0;
+    width: calc(100% + 1px);
+}
+
+.table-wrapper .table-row-title {
+    position: relative;
+    z-index: 2;
+    background-color: #fff;
+}
+
+.table-wrapper .table-row-title > div {
+    position: relative;
+    display: inline-block;
+}
+
+.table-wrapper .table-row-title > div > .info-mark {
+    width: 20px;
+    height: 20px;
+    background: url('info.svg') no-repeat center / 20px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: calc(100% + 5px);
+    cursor: pointer;
+}
+
+.table-wrapper .table-row-title:after,
+.table-wrapper .first-check:after,
+.table-wrapper .second-check:after,
+.table-wrapper .third-check:after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #ddd;
+}
+
+.table-wrapper .first-check:after,
+.table-wrapper .second-check:after,
+.table-wrapper .third-check:after {
+    left: 0;
+}
+
+.table-wrapper .table-row-title:after {
+    right: 0;
+}
+
+.table-wrapper .first-check:after,
+.table-wrapper .second-check:after {
+    width: 100%;
+}
+
+.table-wrapper .table-row-title:after {
+    width: 96%;
+}
+
+.table-wrapper .third-check:after {
+    width: 85%;
+}
+
+.tick {
+    background: url('tick.svg') no-repeat center / 18px;
+}
+
+.cross {
+    background: url('cross.svg') no-repeat center / 18px;
+}
+
+.dollar {
+    background: url('dollar.svg') no-repeat center / 12px;
+}
+
+.table-sticky-header {
+    width: 100%;
+    height: 130px;
+    position: sticky;
+    top: 0;
+    background-color: #677BD3;
+    z-index: 4;
+    display: grid;
+    grid: 130px / minmax(200px, 1fr) repeat(3, 200px);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity .3s;
+    grid-area: 1 / 1 / 2 / 5;
+}
+
+.show-sticky-header {
+    opacity: 1;
+}
+
+.table-sticky-header > .tariff-title {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    position: relative;
+}
+
+.table-container {
+    grid-area: 2 / 1 / 3 / 5;
+    max-height: 500px;
+    transition: max-height .3s;
+    overflow: hidden;
+    padding-top: 100px;
+    margin-top: -89px;
+}
+
+.table-control-btns {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 4;
+    gap: 18px;
+    margin-top: 40px;
+    grid-area: 3 / 1 / 4 / 5;
+}
+
+.table-control-btns.mist:before {
+    content: '';
+    display: block;
+    width: calc(100% + 30px);
+    height: 300px;
+    background-image: linear-gradient(to top, #E6E9F8 20%, transparent);
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 100%;
+    transform: translateX(-15px);
+}
+
+.table-control-btn {
+    position: relative;
+}
+
+.designations {
+    width: 100%;
+    grid-column: 1 / 5;
+}
+
+.designations > p {
+    padding-left: 19px;
+    position: relative;
+    color: #677BD3;
+}
+
+.designations > p:before {
+    content: '';
+    display: block;
+    width: 15px;
+    height: 30px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    background: url('dollar.svg') no-repeat center / 12px;
+}
+
+.table-control-btn {
+    width: 300px;
+    padding: 13px 15px;
+    border: 1px solid var(--main-color);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.table-control-btn.show-table {
+    background-color: transparent;
+    color: var(--main-color);
+}
+
+.table-control-btn.download {
+    background-color: var(--main-color);
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+}

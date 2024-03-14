@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Калькулятор</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="adaptive.css">
+</head>
+<body>
+    <section class="calculator">
+        <h2 class="calculator__title">COMPARE RATES FOR <span>CLOUD VERSION</span></h2>
+        <article class="calc-form-wrapper">
+            <span>Fill in the fields to calculate the cost</span>
+            <form class="calc-form" id="calc-form" action="#" method="POST">
+                <div class="form-inputs-wrapper">
+                    <input class="calc-form-field" id="number-of-recruiters" name="number_of_recruiters" type="number" placeholder="Number of recruiters" aria-label="Number of recruiters">
+                    <div class="calc-input-wrapper">
+                        <input class="calc-form-field" id="simultaneous-sessions" name="simultaneous_sessions" type="number" placeholder="Simultaneous sessions of internal clients" aria-label="Simultaneous sessions of internal clients">
+                    </div>
+                </div>
+                <div class="form-btns-wrapper">
+                    <a class="form-btn calc-request" id="calc-request" href="#">Request an invoice</a>
+                    <button class="form-btn calc-btn" id="calc-btn" type="button">Сalculate</button>
+                </div>
+            </form>
+        </article>
+        <article class="tariffs-and-costs">
+            <div class="table-sticky-header">
+                <div class="empty-space"></div>
+                <div class="tariff-title one fast-start">
+                    <h3>Fast start</h3>
+                    <span class="tariff-price">600 $</span>
+                    <div class="tariff-period">
+                        for one month
+                        <div class="info-mark"></div>
+                    </div>
+                </div>
+                <div class="tariff-title two advanced">
+                    <div class="popular-tariff"></div>
+                    <h3>Advanced</h3>
+                    <span class="tariff-price">600 $</span>
+                    <div class="tariff-period">
+                        for one month
+                        <div class="info-mark"></div>
+                    </div>
+                </div>
+                <div class="tariff-title three">
+                    <h3>Enterprise</h3>
+                    <span class="tariff-price">on request</span>
+                </div>
+            </div>
+            <h2 class="tariffs-and-costs-title">Tariffs <span>and</span> costs</h2>
+            <div class="table-container">
+                <div class="table-wrapper">
+                    <h2>Working with resumes and candidate databases</h2>
+                    <div class="table-row-title first-row">
+                        <div>
+                            Working with resumes and candidate databases
+                            <div class="info-mark"></div>
+                        </div>
+                    </div>
+                    <div class="check first-check">
+                        <div class="tariff-title first-tariff fast-start">
+                            <h3>Fast start</h3>
+                            <span class="tariff-price">600 $</span>
+                            <div class="tariff-period">
+                                for one month
+                                <div class="info-mark"></div>
+                            </div>
+                        </div>
+                        No limits
+                    </div>
+                    <div class="check second-check">
+                        <div class="tariff-title second-tariff advanced">
+                            <div class="popular-tariff" id="popular-tariff"></div>
+                            <h3>Advanced</h3>
+                            <span class="tariff-price">600 $</span>
+                            <div class="tariff-period">
+                                for one month
+                                <div class="info-mark"></div>
+                            </div>
+                        </div>
+                        No limits
+                    </div>
+                    <div class="check third-check">
+                        <div class="tariff-title third-tariff">
+                            <h3>Enterprise</h3>
+                            <span class="tariff-price">on request</span>
+                        </div>
+                        No limits
+                    </div>
+                    <div class="table-row-title">
+                        <div>
+                            Creating a candidate card
+                            <div class="info-mark"></div>
+                        </div>
+                    </div>
+                    <div class="check first-check tick"></div>
+                    <div class="check second-check tick"></div>
+                    <div class="check third-check tick"></div>
+                    <div class="table-row-title">
+                        <div>
+                            Free transfer of resume database from Excel file
+                            <div class="info-mark"></div>
+                        </div>
+                    </div>
+                    <div class="check first-check tick"></div>
+                    <div class="check second-check tick"></div>
+                    <div class="check third-check tick"></div>
+                    <div class="table-row-title">
+                        <div>
+                            Recognition of resumes from DOCX, RTF, TXT files
+                            <div class="info-mark"></div>
+                        </div>
+                    </div>
+                    <div class="check first-check tick"></div>
+                    <div class="check second-check tick"></div>
+                    <div class="check third-check tick"></div>
+                    <div class="table-row-title">
+                        <div>
+                            Downloading candidates' resumes from job sites
+                            <div class="info-mark"></div>
+                        </div>
+                    </div>
+                    <div class="check first-check tick"></div>
+                    <div class="check second-check tick"></div>
+                    <div class="check third-check tick"></div>
+                    <div class="table-row-title">
+                        <div>
+                            Automatic collection of responses from work sites
+                            <div class="info-mark"></div>
+                        </div>
+                    </div>
+                    <div class="check first-check tick"></div>
+                    <div class="check second-check tick"></div>
+                    <div class="check third-check tick"></div>
+                    <div class="table-row-title">
+                        <div>
+                            Browser extension
+                            <div class="info-mark"></div>
+                        </div>
+                    </div>
+                    <div class="check first-check tick"></div>
+                    <div class="check second-check tick"></div>
+                    <div class="check third-check tick"></div>
+                    <div class="table-row-title">
+                        <div>
+                            Built-in browser for working with work sites
+                            <div class="info-mark"></div>
+                        </div>
+                    </div>
+                    <div class="check first-check cross"></div>
+                    <div class="check second-check tick"></div>
+                    <div class="check third-check tick"></div>
+                    <div class="table-row-title">
+                        <div>
+                            Cloud storage space
+                            <div class="info-mark"></div>
+                        </div>
+                    </div>
+                    <div class="check first-check">up to 80 GB per base</div>
+                    <div class="check second-check">up to 160 GB per base</div>
+                    <div class="check third-check">No limits</div>
+                    <h2>Working with resumes and candidate databases</h2>
+                    <div class="table-row-title">
+                        <div>
+                            Working with resumes and candidate databases
+                            <div class="info-mark"></div>
+                        </div>
+                    </div>
+                    <div class="check first-check">No limits</div>
+                    <div class="check second-check">No limits</div>
+                    <div class="check third-check">No limits</div>
+                    <div class="table-row-title">
+                        <div>
+                            Creating a candidate card
+                            <div class="info-mark"></div>
+                        </div>
+                    </div>
+                    <div class="check first-check tick"></div>
+                    <div class="check second-check tick"></div>
+                    <div class="check third-check tick"></div>
+                    <div class="table-row-title">
+                        <div>
+                            Free transfer of resume database from Excel file
+                            <div class="info-mark"></div>
+                        </div>
+                    </div>
+                    <div class="check first-check tick"></div>
+                    <div class="check second-check tick"></div>
+                    <div class="check third-check tick"></div>
+                    <div class="table-row-title">
+                        <div>
+                            Recognition of resumes from DOCX, RTF, TXT files
+                            <div class="info-mark"></div>
+                        </div>
+                    </div>
+                    <div class="check first-check tick"></div>
+                    <div class="check second-check tick"></div>
+                    <div class="check third-check tick"></div>
+                    <div class="table-row-title">
+                        <div>
+                            Downloading candidates' resumes from job sites
+                            <div class="info-mark"></div>
+                        </div>
+                    </div>
+                    <div class="check first-check tick"></div>
+                    <div class="check second-check tick"></div>
+                    <div class="check third-check tick"></div>
+                    <div class="table-row-title">
+                        <div>
+                            Automatic collection of responses from work sites
+                            <div class="info-mark"></div>
+                        </div>
+                    </div>
+                    <div class="check first-check tick"></div>
+                    <div class="check second-check tick"></div>
+                    <div class="check third-check tick"></div>
+                    <div class="table-row-title">
+                        <div>
+                            Browser extension
+                            <div class="info-mark"></div>
+                        </div>
+                    </div>
+                    <div class="check first-check tick"></div>
+                    <div class="check second-check tick"></div>
+                    <div class="check third-check tick"></div>
+                    <div class="table-row-title">
+                        <div>
+                            Built-in browser for working with work sites
+                            <div class="info-mark"></div>
+                        </div>
+                    </div>
+                    <div class="check first-check cross"></div>
+                    <div class="check second-check tick"></div>
+                    <div class="check third-check dollar"></div>
+                    <div class="table-row-title">
+                        <div>
+                            Cloud storage space
+                            <div class="info-mark"></div>
+                        </div>
+                    </div>
+                    <div class="check first-check">up to 80 GB per base</div>
+                    <div class="check second-check">up to 160 GB per base</div>
+                    <div class="check third-check">No limits</div>
+                    <div class="designations">
+                        <p>— functionality is additionally agreed upon during the collection of project requirements and is paid separately</p>
+                    </div>
+                </div>
+            </div>
+            <div class="table-control-btns mist">
+                <button class="table-control-btn show-table" type="button" id="show-full-table-btn">Show table</button>
+                <a class="table-control-btn download" href="#" download>Download comparison table</a>
+            </div>
+        </article>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
